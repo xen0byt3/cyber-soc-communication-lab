@@ -1,18 +1,59 @@
+==================================================
+STUDENT ANALYSIS – ACTIVITY #3
+Analyst Role: Tier 1 Analyst
+
+1. Is there a brute force attack?
+Answer: YES
+
+Threat: Brute Force Attack
+ID: T1110
+Sub-Technique: Password Spraying (T1110.003)
+
+Evidence:
 Apr 05 10:01:23 server sshd[1024]: Failed password for root from 192.168.1.100
 Apr 05 10:01:25 server sshd[1024]: Failed password for admin from 192.168.1.100
 Apr 05 10:01:30 server sshd[1024]: Failed password for user from 192.168.1.100
 Apr 05 10:02:10 server sshd[1024]: Accepted password for admin from 192.168.1.100
-Apr 05 10:03:15 server sudo: admin accessed root privileges
-Apr 05 10:01:23 Failed password for root from 192.168.1.100
-Apr 05 10:02:10 Accepted password for admin from 192.168.1.100
-Apr 05 10:03:15 admin accessed root privileges
+
+Another Threat: Brute Force Attack
+ID: T1110
+Sub-Technique: Password Spraying (T1110.003)
+
+Evidence:
 Apr 05 11:15:02 Failed login for user1 from 10.0.0.45
 Apr 05 11:15:10 Failed login for user2 from 10.0.0.45
 Apr 05 11:16:22 Failed login for admin from 10.0.0.45
+
+
+2. Which IP address is suspicious?
+Answer: Both IP addresses are suspicious:
+192.168.1.100 and 10.0.0.45.
+
+
+3. Was there unauthorized access?
+Answer: YES
+
+Threat: Privilege Escalation
+ID: TA0004
+
+Evidence:
+Apr 05 10:03:15 server sudo: admin accessed root privileges
+
+
+4. Is this related to phishing?
+Answer: YES
+
+Threat: Phishing
+ID: T1566.002
+Sub-Technique: Spearphishing Link
+
+Evidence:
 From: support@secure-login.com
 Subject: Urgent: Verify your account
-
-Click here to verify:
-http://fake-login-security.com
+Link: http://fake-login-security.com
 
 User reported entering credentials.
+
+Assessment:
+The phishing email may have resulted in credential compromise.
+==================================================
