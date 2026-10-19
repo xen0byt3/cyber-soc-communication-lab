@@ -1,18 +1,13 @@
-Apr 05 10:01:23 server sshd[1024]: Failed password for root from 192.168.1.100
-Apr 05 10:01:25 server sshd[1024]: Failed password for admin from 192.168.1.100
-Apr 05 10:01:30 server sshd[1024]: Failed password for user from 192.168.1.100
-Apr 05 10:02:10 server sshd[1024]: Accepted password for admin from 192.168.1.100
-Apr 05 10:03:15 server sudo: admin accessed root privileges
-Apr 05 10:01:23 Failed password for root from 192.168.1.100
-Apr 05 10:02:10 Accepted password for admin from 192.168.1.100
-Apr 05 10:03:15 admin accessed root privileges
-Apr 05 11:15:02 Failed login for user1 from 10.0.0.45
-Apr 05 11:15:10 Failed login for user2 from 10.0.0.45
-Apr 05 11:16:22 Failed login for admin from 10.0.0.45
-From: support@secure-login.com
-Subject: Urgent: Verify your account
-
-Click here to verify:
-http://fake-login-security.com
-
-User reported entering credentials.
+Apr 05 10:01:23 server sshd[1024]: Failed password for invalid user root from 192.168.1.100 port 54210 ssh2
+Apr 05 10:01:25 server sshd[1024]: Failed password for invalid user admin from 192.168.1.100 port 54212 ssh2
+Apr 05 10:01:30 server sshd[1024]: Failed password for user from 192.168.1.100 port 54218 ssh2
+Apr 05 10:02:10 server sshd[1024]: Accepted password for admin from 192.168.1.100 port 54230 ssh2
+Apr 05 10:03:15 server sudo[1088]: admin : TTY=pts/1 ; PWD=/home/admin ; USER=root ; COMMAND=/bin/bash
+Apr 05 11:15:02 server webapp[2041]: [AUTH_WARN] Event=LoginFailed User="user1" SourceIP=10.0.0.45 Reason="User not found" ResponseTime=12ms
+Apr 05 11:15:10 server webapp[2041]: [AUTH_WARN] Event=LoginFailed User="user2" SourceIP=10.0.0.45 Reason="User not found" ResponseTime=11ms
+Apr 05 11:16:22 server webapp[2041]: [AUTH_WARN] Event=LoginFailed User="admin" SourceIP=10.0.0.45 Reason="Invalid credentials" ResponseTime=185ms
+Apr 05 11:20:05 server nginx[3105]: 10.0.0.45 - - [05/Apr/2026:11:20:05 +0000] "GET /api/v1/products?id=1%20OR%201=1%20-- HTTP/1.1" 500 1432 "http://example.com/products" "Mozilla/5.0 (SQLmap/1.6#stable)"
+Apr 05 11:20:12 server webapp[2041]: [DB_ERROR] Query="SELECT * FROM products WHERE id = 1 OR 1=1 --" Exception="Unterminated string literal near '--'" SourceIP=10.0.0.45
+Apr 05 12:00:01 server mailserver[4010]: [MAIL_INBOUND] From=<support@secure-login.com> To=<victim@company.com> Subject="Urgent: Verify your account" Status=DELIVERED MessageID=<20260405120001.4010@secure-login.com>
+Apr 05 12:04:30 server proxy[1520]: [WEB_FILTER] User="victim" SrcIP=192.168.1.150 TargetURL="http://fake-login-security.com/login" Action="ALLOWED" Category="Uncategorized"
+Apr 05 12:05:10 server endpoint-agent[5012]: [USER_REPORT] User="victim@company.com" Event="Credential Submission" Details="User reported entering corporate credentials on external link http://fake-login-security.com"
