@@ -1,3 +1,25 @@
+#FOR DEMO ONLY
+Apr 05 10:01:23 server sshd[1024]: Failed password for root from 192.168.1.100
+Apr 05 10:01:25 server sshd[1024]: Failed password for admin from 192.168.1.100
+Apr 05 10:01:30 server sshd[1024]: Failed password for user from 192.168.1.100
+Apr 05 10:02:10 server sshd[1024]: Accepted password for admin from 192.168.1.100
+Apr 05 10:03:15 server sudo: admin accessed root privileges
+Apr 05 10:01:23 Failed password for root from 192.168.1.100
+Apr 05 10:02:10 Accepted password for admin from 192.168.1.100
+Apr 05 10:03:15 admin accessed root privileges
+Apr 05 11:15:02 Failed login for user1 from 10.0.0.45
+Apr 05 11:15:10 Failed login for user2 from 10.0.0.45
+Apr 05 11:16:22 Failed login for admin from 10.0.0.45
+From: support@secure-login.com
+Subject: Urgent: Verify your account
+
+Click here to verify:
+http://fake-login-security.com
+
+User reported entering credentials.
+
+
+#THIS IS YOUR MAIN ACTIVITY, GOODLUCK!
 Apr 05 10:01:23 server sshd[1024]: Failed password for invalid user root from 192.168.1.100 port 54210 ssh2
 Apr 05 10:01:25 server sshd[1024]: Failed password for invalid user admin from 192.168.1.100 port 54212 ssh2
 Apr 05 10:01:30 server sshd[1024]: Failed password for user from 192.168.1.100 port 54218 ssh2
