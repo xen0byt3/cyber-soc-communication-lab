@@ -1,0 +1,51 @@
+
+===== CYBER THREAT LOG REPORT =====
+Name: Mercel Anne C. Fernando
+Handle: Digi-Shield
+Start Time: 2026-08-05 21:23:08.856437
+End Time: 2026-08-05 21:26:45.785866
+Duration (minutes): 3.62
+Score: 8/10
+Rating: ADVANCED
+---- Threat Logs ----
+Threat: FTP Credential Sniffing
+ALERT: Possible brute force attempt detected
+NOTICE: Suspicious traffic pattern detected targeting port 
+-------------------
+Threat: SSH Brute Force Attack
+ALERT: Possible brute force attempt detected
+NOTICE: Suspicious traffic pattern detected targeting port 
+-------------------
+Threat: HTTP Web Exploit
+ALERT: Possible brute force attempt detected
+WARNING: Multiple authentication failures for service
+-------------------
+Threat: MySQL Data Theft
+ALERT: Failed login attempt detected from 192.168.1.185 on port
+ALERT: Failed login attempt detected from 192.168.1.237 on port
+-------------------
+Threat: Telnet Credential Theft
+ALERT: Possible brute force attempt detected
+WARNING: Multiple authentication failures for service
+-------------------
+Threat: DNS Amplification DDoS
+CRITICAL: Ransomware activity suspected via
+NOTICE: Suspicious traffic pattern detected targeting port 
+-------------------
+Threat: POP3 Credential Sniffing
+CRITICAL: Ransomware activity suspected via
+WARNING: Multiple authentication failures for service
+-------------------
+Threat: RDP Brute Force Attack
+CRITICAL: Ransomware activity suspected via
+NOTICE: Suspicious traffic pattern detected targeting port 
+-------------------
+Threat: Proxy Web Exploit
+CRITICAL: Ransomware activity suspected via
+ALERT: Possible brute force attempt detected
+-------------------
+Threat: SMB Ransomware Attack
+ALERT: Failed login attempt detected from 192.168.1.216 on port
+ALERT: Possible brute force attempt detected
+-------------------
+===================================
